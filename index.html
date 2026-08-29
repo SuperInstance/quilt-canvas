@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>quilt-canvas</title>
+  <style>
+    html, body { margin: 0; padding: 0; height: 100%; background: #0e0f12; overflow: hidden; }
+    canvas { display: block; width: 100vw; height: 100vh; cursor: grab; }
+    canvas.dragging { cursor: grabbing; }
+    #hud {
+      position: fixed; top: 10px; left: 10px; z-index: 10;
+      font: 12px/1.6 ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+      color: #cdd3dc; background: rgba(14, 15, 18, 0.78);
+      border: 1px solid #2a2d33; border-radius: 4px;
+      padding: 8px 12px; pointer-events: none; white-space: pre;
+    }
+    #hud .dim { color: #6b7280; }
+  </style>
+</head>
+<body>
+  <canvas id="c"></canvas>
+  <div id="hud">loading…</div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
